@@ -1,0 +1,192 @@
+---
+import { Image } from 'astro:assets';
+import Paper from '../../assets/images/paper.svg';
+import World from '../../assets/images/steps/world.svg';
+import Dev from '../../assets/images/steps/dev.svg';
+import Eye from '../../assets/images/steps/eye.svg';
+import Money from '../../assets/images/steps/money.svg';
+import Stats from '../../assets/images/steps/stats.svg';
+import Video from '../../assets/images/steps/video.svg';
+import Anime from '../../assets/images/2fx/wallpapers/wall1.svg';
+---
+
+<Image src={Paper} class="paper" alt="Paper image" />
+<div id="steps">
+    <h2>Nuestro proceso de trabajo</h2>
+    <div class="steps-container">
+        <Image src={Anime} class="anime" alt="Paper image" />
+        <div class="step">
+            <div class="step-icons">
+                <Image src={Money} class="world" alt="World icons" />
+                <p>0001</p>
+            </div>
+            <div class="step-content">
+                    <p class="step-title">Cotización</p>
+                    <p class="step-desc">Se envía una cotización totalmente gratuita enlistando los requerimientos del proyecto para tanto cliente como la agencia estén en la misma página.</p>
+            </div>
+            <div class="step-right"><span>^</span><span>^</span><span>^</span><span>^</span><span>^</span></div>
+        </div>
+        <div class="step">
+            <div class="step-icons">
+                <Image src={Dev} class="world" alt="World icons" />
+                <p>0002</p>
+            </div>
+            <div class="step-content">
+                    <p class="step-title">Desarrollo del proyecto</p>
+                    <p class="step-desc"> En el desarrollo del proyecto se entregan actualizaciones semanales o mensuales (dependiendo del tipo de proyecto) para que usted pueda ver el avance con transparencia y poder hacer ajustes en caso de ser necesario antes de lanzar a producción el proyecto.</p>
+            </div>
+            <div class="step-right"><span>^</span><span>^</span><span>^</span><span>^</span><span>^</span></div>
+        </div>
+        <div class="step">
+            <div class="step-icons">
+                <Image src={World} class="world" alt="World icons" />
+                <p>0003</p>
+            </div>
+            <div class="step-content">
+                    <p class="step-title">Publicidad online</p>
+                    <p class="step-desc"> Si el proyecto requiere de algún tipo de publicidad en línea nosotros podemos ayudar creando anuncios para que miles de usuarios puedan ver y conocer su producto.</p>
+            </div>
+            <div class="step-right"><span>^</span><span>^</span><span>^</span><span>^</span><span>^</span></div>
+        </div>
+        <div class="step">
+            <div class="step-icons">
+                <Image src={Video} class="world" alt="World icons" />
+                <p>0004</p>
+            </div>
+            <div class="step-content">
+                    <p class="step-title">Creación de contenido</p>
+                    <p class="step-desc"> Si necesitas que tus redes sociales estén activas con posts y historias creativas tenemos planes para poder crear una comunidad online.</p>
+            </div>
+            <div class="step-right"><span>^</span><span>^</span><span>^</span><span>^</span><span>^</span></div>
+        </div>
+        <div class="step">
+            <div class="step-icons">
+                <Image src={Stats} class="world" alt="World icons" />
+                <p>0005</p>
+            </div>
+            <div class="step-content">
+                    <p class="step-title">Analítica y Estadísticas</p>
+                    <p class="step-desc"> Proporcionaremos un panel de control para que puedas ver los clicks y las visitas que tu producto web ha tenido.</p>
+            </div>
+            <div class="step-right"><span>^</span><span>^</span><span>^</span><span>^</span><span>^</span></div>
+        </div>
+        <div class="step">
+            <div class="step-icons">
+                <Image src={Eye} class="world" alt="World icons" />
+                <p>0006</p>
+            </div>
+            <div class="step-content">
+                    <p class="step-title">Atención al cliente</p>
+                    <p class="step-desc"> Proporcionaremos un número de contacto para que puedas llamar en caso de dudas, preguntas o algún problema que esté teniendo con su producto.</p>
+            </div>
+            <div class="step-right"><span>^</span><span>^</span><span>^</span><span>^</span><span>^</span></div>
+        </div>
+    </div>
+</div>
+
+<style lang="scss">
+    #steps{
+        background-color: white;
+        position: relative;
+    }
+
+    .anime{
+        position: absolute;
+        z-index: 0;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: .1;
+    }
+
+    .world{
+        width: 40px;
+        height: 40px;
+    }
+
+    h2{
+        font-family: "satoshi";
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 5svw;
+        line-height: 1;
+        margin: 0;
+        border-bottom: 1px solid black;
+        padding: 20px 0;
+    }
+
+    .paper{
+        width: 100%;
+        transform: translateY(10px);
+    }
+
+    .steps-container{
+        display: flex;
+        flex-direction: column;
+        row-gap: 50px;
+        position: relative;
+        z-index: 10;
+        padding: 100px 30px;
+    }
+
+    .step{
+        display: grid;
+        grid-template-columns: 100px 1fr 40px;
+        border: 3px solid black;
+        background-color: white;
+        max-width: 1200px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 10;
+        
+        &-icons{
+            background-color: black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            p{
+                color: white;
+            }
+        }
+
+        &-content{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            column-gap: 50px;
+
+            p{
+                line-height: 1;
+                margin: 0;
+            }
+        }
+
+        &-title{
+            font-family: "VT323", monospace;
+            font-size: 50px;
+            text-transform: uppercase;
+        }
+
+        &-right{
+            background-color: black;
+            display: flex;
+            flex-direction: column;
+            font-weight: 800;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 0;
+            span{
+                font-family: "Ubuntu Sans Mono", monospace;
+                color: white;
+                transform: rotate(180deg);
+            }
+        }
+
+    }
+</style>

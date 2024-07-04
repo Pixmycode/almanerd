@@ -1,0 +1,19 @@
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 480 442" style="enable-background:new 0 0 480 442;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#5CF4FF;stroke-width:9;stroke-miterlimit:10;}
+  .path {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: dash 3s linear infinite;
+  }
+
+  @keyframes dash {
+    0%{ stroke-dashoffset: 1000; opacity:1; }
+    10%{ stroke-dashoffset: 0; opacity:1;}
+    15%{ stroke-dashoffset: 0; opacity:0;}
+    100%{ stroke-dashoffset: 0; opacity:0;}
+  }
+</style>
+<polyline class="st0 path" points="0,436.4 63.5,384.5 50.5,191.5 165.92,313.95 240,105.94 368.5,54.5 402.5,-19.5 "/>
+</svg>

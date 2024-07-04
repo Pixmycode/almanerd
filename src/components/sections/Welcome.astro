@@ -1,0 +1,236 @@
+---
+import { Image } from 'astro:assets';
+import CloudLeft from '../../assets/images/test-left.svg';
+import CloudRight from '../../assets/images/test-right.svg';
+import Background from '../../assets/images/bg.png';
+import Androide from '../../assets/images/android.png';
+import AndroideHand from '../../assets/images/android-hand.png';
+import Paper from '../../assets/images/paper.svg';
+---
+<div id="welcome">
+    <Image src={Background} class="manga-background" alt="manga background" />
+    
+    <div class="welcome-title">
+        <h3>Estudio<br /><span>Creativo</span></h3>
+        <div class="android-container">
+            <div class="power-ball">
+                <div class="ball"></div>
+                <div class="powerline"></div>
+            </div>
+            <div class="android-hand">
+                <Image src={AndroideHand} class="android" alt="Robot androide con bola de poder" />
+            </div>
+            <Image src={Androide} class="android" alt="Robot androide con bola de poder" />
+        </div>
+    </div>
+
+    <div class="welcome-bottom-logo">
+        <h1 class="letter-logo">ALMA<br /><span>NERD</span></h1>
+    </div>
+
+    <div class="welcome-data">
+        <p> Santiago de Querétaro</p>
+    </div>
+
+    <Image src={CloudLeft} class="cloud cloud-left" alt="Manga cloud" />
+    <Image src={CloudRight} class="cloud cloud-right" alt="Manga cloud" />
+</div>
+
+<style>
+    #welcome{
+        border-bottom: 1px solid black;
+        height: calc(100svh + 100px);
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    h1{
+        font-family: "thunder";
+        color: black;
+    }
+
+    .welcome-title{
+        text-transform: uppercase;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .welcome-title h3{
+        font-size: 14svw;
+        font-family: "thunder", monospace;
+        margin: 0;
+        line-height: 0.8;
+        position: absolute;
+        text-align: center;
+        color: rgb(var(--accent));
+    }
+
+    .welcome-title span{
+        font-size: 15svw;
+        z-index: 99;
+        position: relative;
+        color: white;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: black;
+    }
+
+    .android-container{
+        position: relative
+    }
+
+    .android{
+        width: 450px;
+        height: auto;
+        animation: float 10s ease infinite;
+    }
+
+    .power-ball{
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        opacity: .8;
+    }
+
+    .ball{
+        position: absolute;
+        background-color: rgb(var(--accent));
+        border: 5px solid #A3FFEA;
+        box-shadow:0 0 10px 10px rgb(50, 252, 199);
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        left: 30%;
+        top: 30%;
+        animation: rotate 5s linear infinite;
+    }
+
+    .ball::after{
+        content: "";
+        position: absolute;
+        width: 3000px;
+        height: 3px;
+        background-color: rgb(var(--accent));
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        animation: opacity 1s linear infinite;
+    }
+
+    @keyframes rotate {
+        0%{
+            transform: rotate(0deg);
+        }
+        100%{
+            transform: rotate(360deg);
+        }
+    }
+
+    @keyframes opacity {
+        0%{
+            opacity: 1;
+        }
+        50%{
+            opacity: 0.5;
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+
+    .android-hand{
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 3;
+    }
+
+    @keyframes float {
+        0%{
+            transform: translateY(0%);
+        }
+        50%{
+            transform: translateY(5%);
+        }
+        100%{
+            transform: translateY(0%);
+        }
+    }
+
+    .cloud{
+        position: absolute;
+        bottom: -1%;
+        width: 40%;
+        height: 50%;
+        object-fit: cover;
+    }
+
+    .cloud-left{
+        left: 0;
+        object-position: right;
+    }
+
+    .cloud-right{
+        right: 0;
+        object-position: left;
+    }
+
+    .welcome-bottom-logo{
+        position: absolute;
+        left: 20px;
+        top: 10px;
+        width: fit-content;
+        text-align: center;
+    }
+
+    .letter-logo{
+        font-size: 40px;
+        line-height: 0.75;
+        margin: 0;
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .letter-logo span{
+        font-size: 42px;
+    }
+
+    .manga-background{
+        position: absolute;
+        inset: 0;
+        opacity: .05;
+        width: 100%;
+        height: 100%;
+    }
+
+    .welcome-data{
+        font-size: 11px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-weight: 100;
+    }
+
+    .welcome-data p{
+        margin: 0
+    }
+
+    .paper{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+    }
+
+</style>

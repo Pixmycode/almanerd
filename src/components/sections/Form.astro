@@ -1,0 +1,183 @@
+---
+import { Image } from 'astro:assets';
+import Whats from '../../assets/images/contact/whats.svg';
+---
+
+<div id="contact">
+    <h2 class="title">Descubre como podemos ayudar a tu negocio</h2>
+    <p class="subtitle">Contactanos llenando el formulario</p>
+    <form action="https://api.web3forms.com/submit" method="POST" id="contact">
+
+        <!-- Replace with your Access Key -->
+        <input type="hidden" name="access_key" value="d90f3a0f-a984-4258-b007-230986f6bc34">
+
+        <!-- Form Inputs. Each input must have a name="" attribute -->
+        <div class="grid">
+            <div class="row name">
+                <p>Nombre:</p>
+                <input type="text" name="name" required>
+            </div>
+            <div class="row cel">
+                <p>Celular:</p>
+                <input type="tel" name="phone">
+            </div>
+            <div class="row email">
+                <p>Correo electrónico:</p>
+                <input type="email" name="email" required>
+            </div>
+            <div class="row text">
+                <p>Mensaje:</p>
+                <textarea name="message" required></textarea>
+            </div>
+        </div>
+
+        <!-- Honeypot Spam Protection -->
+        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+        <!-- Custom Confirmation / Success Page -->
+        <!-- <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html"> -->
+        <div class="h-captcha" data-captcha="true"></div>
+        <button type="submit" class="send">Enviar</button>
+
+    </form>
+
+    <div class="wats">
+        <span>O contactanos por</span> <br/><a href="#" href="wa.link/76xr1p"><Image src={Whats} class="whats" alt="Paper image" />whatsapp</a>
+    </div>
+</div>
+
+<script src="https://web3forms.com/client/script.js" async defer></script>
+<script>
+    const form = document.getElementById('contact');
+
+    form.addEventListener('submit', function (e) {
+
+        const hCaptcha = form.querySelector('textarea[name=h-captcha-response]').value;
+
+        if (!hCaptcha) {
+            e.preventDefault();
+            alert("Please fill out captcha field")
+            return
+        }
+    });
+</script>
+
+<style>
+    #contact {
+        padding: 100px 0px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    h2 {
+        text-align: center;
+        margin: 0;
+        line-height: 1;
+        font-family: "thunder";
+        font-size: 60px;
+        text-transform: uppercase;
+        margin: 0;
+    }
+
+    .subtitle {
+        font-family: "satoshi";
+        text-align: center;
+        font-size: 30px;
+        margin: 0;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        column-gap: 50px;
+    }
+
+    .name {
+        grid-area: 1 / 1 / 2 / 3;
+    }
+
+    .cel {
+        grid-area: 2 / 1 / 3 / 2;
+    }
+
+    .email {
+        grid-area: 2 / 2 / 3 / 3;
+    }
+
+    .text {
+        grid-area: 3 / 1 / 4 / 3;
+    }
+
+    input, textarea{
+        width: 100%;
+        padding: 10px;
+    }
+
+    .h-captcha{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 50px 0;
+    }
+
+    .send{
+        color: black;
+		font-family: "VT323", monospace;
+        background-color: rgb(var(--accent));
+        border: 1px solid black;
+        font-size: 40px;
+        display: flex;
+        margin-left: auto;
+        padding: 10px 50px;
+        font-weight: 700;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: all .3s ease;
+    }
+
+    .send:hover{
+        background-color: rgba(255,255,255,0);
+        transition: all .3s ease;
+    }
+
+    .wats{
+        font-family: "thunder";
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    .wats a{
+        background-color: #075E54;
+        display: flex;
+        padding: 10px 30px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        text-decoration: none;
+        column-gap: 10px;
+        text-transform: uppercase;
+        font-size: 40px;
+        width: 300px;
+        font-family: "satoshi";
+        margin: 0 auto;
+    }
+
+    .wats a:visited{
+        color: white;
+    }
+
+    .wats img{
+        width: 50px;
+        height: auto;
+    }
+
+    .wats span{
+        font-size: 60px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+</style>

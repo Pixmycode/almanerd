@@ -1,0 +1,19 @@
+{
+  "name": "almanerd",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "astro": "^4.11.1",
+    "astro-integration-lottie": "^0.3.0",
+    "gsap": "^3.12.5",
+    "lottie-web": "^5.12.2",
+    "sass": "^1.77.6"
+  }
+}

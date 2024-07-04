@@ -1,0 +1,737 @@
+<div class="my-projects">
+  <div class="line line1"></div>
+  <div class="line line2"></div>
+  <div class="line line3"></div>
+  <p class="work-title">Creamos páginas web que llaman la atención del mundo, con animaciones y transiciones fluidas
+    para que todos reconozcan tu <span>MARCA</span>.</p>
+  <div class="work-images-container">
+    <div class="work-images">
+      <div class="image1">
+        <div class="work-item-img" style={{backgroundImage: `url('./img/work/1.jpg')`}}></div>
+      </div>
+      <div class="image2">
+        <div class="work-item-img" style={{backgroundImage: `url('./img/work/2.jpg')`}}></div>
+      </div>
+      <div class="image3">
+        <div class="work-item-img" style={{backgroundImage: `url('./img/work/3.jpg')`}}></div>
+      </div>
+      <div class="image4">
+        <div class="work-item-img" style={{backgroundImage: `url('./img/work/4.jpg')`}}></div>
+      </div>
+      <div class="image5">
+        <div class="work-item-img" style={{backgroundImage: `url('./img/work/5.jpg')`}}></div>
+      </div>
+      <div class="image6">
+        <div class="work-item-img" style={{backgroundImage: `url('./img/work/6.jpg')`}}></div>
+      </div>
+      <div class="image7">
+        <div class="work-item-img" style={{backgroundImage: `url('./img/work/7.jpg')`}}></div>
+      </div>
+      <div class="image8">
+        <div class="work-item-img" style={{backgroundImage: `url('./img/work/8.png')`}}></div>
+      </div>
+      <div class="image9">
+        <div class="work-item-img" style={{backgroundImage: `url('./img/work/9.jpg')`}}></div>
+      </div>
+      <div class="image10">
+        <div class="work-item-img" style={{backgroundImage: `url('./img/work/10.jpg')`}}></div>
+      </div>
+      <div class="image11">
+        <div class="work-item-img" style={{backgroundImage: `url('./img/work/11.png')`}}></div>
+      </div>
+      <div class="image12">
+        <div class="work-item-img" style={{backgroundImage: `url('./img/work/12.png')`}}></div>
+      </div>
+      <div class="image13">
+        <div class="work-item-img" style={{backgroundImage: `url('./img/work/13.jpg')`}}></div>
+      </div>
+      <div class="image14">
+        <div class="work-item-img" style={{backgroundImage: `url('./img/work/14.png')`}}></div>
+      </div>
+      <div class="image15">
+        <div class="work-item-img" style={{backgroundImage: `url('./img/work/15.png')`}}></div>
+      </div>
+      <div class="image16">
+        <div class="work-item-img" style={{backgroundImage: `url('./img/work/16.png')`}}></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  import gsap from "gsap";
+  import {
+    ScrollTrigger
+  } from "gsap/ScrollTrigger";
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.to('.my-projects', {
+    scrollTrigger: {
+      trigger: '.my-projects',
+      start: "0 0",
+      end: "+=1000",
+      scrub: 1,
+      pin: true,
+    },
+  })
+
+  var image = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.my-projects',
+      start: "0 20%",
+      end: "+=2200 top",
+      scrub: 1,
+    }
+  });
+
+  image.fromTo(".work-images", {
+    scale: '0.5',
+    translateY: '0px'
+  }, {
+    scale: '1.2',
+    translateY: '400px'
+  });
+
+
+  var image1 = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.my-projects',
+      start: "0 20%",
+      end: "+=2500 top",
+      scrub: 1
+    }
+  });
+
+  image1.fromTo(".image1", {
+    scale: '0.2',
+    z: '-120px',
+    x: '0',
+    y: '0',
+    opacity: 0.8,
+    filter: "blur(5px)"
+  }, {
+    scale: '1',
+    z: '500px',
+    x: '-150%',
+    y: '-300%',
+    opacity: 1,
+    filter: "blur(0px)"
+  });
+
+  var image2 = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.my-projects',
+      start: "0 3%",
+      end: "+=500 top",
+      scrub: 1,
+    }
+  });
+
+  image2.fromTo(".image2", {
+    scale: '0.4',
+    z: '-120px',
+    x: '-20%',
+    opacity: 0.8,
+    filter: "blur(5px)"
+  }, {
+    scale: '1',
+    z: '500px',
+    x: '-300%',
+    opacity: 1,
+    filter: "blur(0px)"
+  });
+
+  var image3 = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.my-projects',
+      start: "0 8%",
+      end: "+=2900 top",
+      scrub: 1,
+    }
+  });
+
+  image3.fromTo(".image3", {
+    scale: '0.4',
+    z: '-120px',
+    x: '0',
+    y: '0',
+    opacity: 0.8,
+    filter: "blur(5px)"
+  }, {
+    scale: '1',
+    z: '500px',
+    x: '-300%',
+    y: '350%',
+    opacity: 1,
+    filter: "blur(0px)"
+  });
+
+  var image4 = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.my-projects',
+      start: "0 8%",
+      end: "+=2800 top",
+      scrub: 1,
+    }
+  });
+
+  image4.fromTo(".image4", {
+    scale: '0.4',
+    z: '-120px',
+    y: '100px',
+    opacity: 0.8,
+    filter: "blur(5px)"
+  }, {
+    scale: '1.2',
+    z: '300%',
+    y: '-550%',
+    opacity: 1,
+    duration: 13,
+    filter: "blur(0px)"
+  });
+
+  var image5 = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.my-projects',
+      start: "0 3%",
+      end: "+=500 top",
+      scrub: 1,
+    }
+  });
+
+  image5.fromTo(".image5", {
+    scale: '0.4',
+    z: '-120px',
+    y: '-22%',
+    opacity: 0.8,
+    filter: "blur(5px)"
+  }, {
+    scale: '1',
+    z: '500px',
+    y: '-350%',
+    opacity: 1,
+    filter: "blur(0px)"
+  });
+
+  var image6 = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.my-projects',
+      start: "0 8%",
+      end: "+=2700 top",
+      scrub: 1,
+    }
+  });
+
+  image6.fromTo(".image6", {
+    scale: '0.4',
+    z: '-120px',
+    x: '0',
+    y: '0',
+    opacity: 0.8,
+    filter: "blur(5px)"
+  }, {
+    scale: '1',
+    z: '500px',
+    x: '-300%',
+    y: '100%',
+    opacity: 1,
+    filter: "blur(0px)"
+  });
+
+  var image7 = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.my-projects',
+      start: "0 3%",
+      end: "+=500 top",
+      scrub: 1,
+    }
+  });
+
+  image7.fromTo(".image7", {
+    scale: '0.2',
+    z: '-120px',
+    x: '0',
+    y: '0',
+    opacity: 0.8,
+  }, {
+    scale: '1',
+    z: '500px',
+    x: '-150%',
+    y: '200%',
+    opacity: 1,
+  });
+
+  var image10 = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.my-projects',
+      start: "0 8%",
+      end: "+=2200 top",
+      scrub: 1,
+    }
+  });
+
+  var image8 = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.my-projects',
+      start: "0 8%",
+      end: "+=2280 top",
+      scrub: 1,
+    }
+  });
+
+  image8.fromTo(".image8", {
+    scale: '0.4',
+    z: '-120px',
+    y: '0',
+    opacity: 0.8,
+  }, {
+    scale: '1',
+    z: '500px',
+    y: '250%',
+    opacity: 1,
+  });
+
+
+  var image9 = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.my-projects',
+      start: "0 8%",
+      end: "+=2890 top",
+      scrub: 1,
+    }
+  });
+
+  image9.fromTo(".image9", {
+    scale: '0.4',
+    z: '-120px',
+    x: '0',
+    y: '0',
+    opacity: 0.8,
+  }, {
+    scale: '1',
+    z: '500px',
+    x: '10%',
+    y: '-550%',
+    opacity: 1,
+  });
+
+  image10.fromTo(".image10", {
+    scale: '0.4',
+    z: '-120px',
+    x: '0',
+    y: '0',
+    opacity: 0.8,
+  }, {
+    scale: '1',
+    z: '500px',
+    x: '200%',
+    y: '-450%',
+    opacity: 1,
+  });
+
+
+  var image11 = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.my-projects',
+      start: "0 8%",
+      end: "+=2200 top",
+      scrub: 1,
+    }
+  });
+
+  image11.fromTo(".image11", {
+    scale: '0.4',
+    z: '-120px',
+    x: '0',
+    y: '0',
+    opacity: 0.8,
+  }, {
+    scale: '1',
+    z: '500px',
+    x: '300%',
+    y: '-250%',
+    opacity: 1,
+  });
+
+
+  var image12 = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.my-projects',
+      start: "0 8%",
+      end: "+=2200 top",
+      scrub: 1,
+    }
+  });
+
+  image12.fromTo(".image12", {
+    scale: '0.4',
+    z: '-120px',
+    x: '0',
+    y: '20%',
+    opacity: 0.8,
+  }, {
+    scale: '1',
+    z: '500px',
+    x: '40%',
+    y: '250%',
+    opacity: 1,
+  });
+
+
+  var image13 = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.my-projects',
+      start: "0 20%",
+      end: "+=2500 top",
+      scrub: 1,
+    }
+  });
+
+  image13.fromTo(".image13", {
+    scale: '0.2',
+    z: '-120px',
+    x: '0',
+    y: '0',
+    opacity: 0.8,
+  }, {
+    scale: '1',
+    z: '500px',
+    x: '150%',
+    y: '-300%',
+    opacity: 1,
+  });
+
+  var image14 = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.my-projects',
+      start: "0 3%",
+      end: "+=500 top",
+      scrub: 1,
+    }
+  });
+
+  image14.fromTo(".image14", {
+    scale: '0.4',
+    z: '-120px',
+    x: '-10%',
+    opacity: 0.8,
+  }, {
+    scale: '1',
+    z: '500px',
+    x: '300%',
+    opacity: 1,
+  });
+
+  var image15 = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.my-projects',
+      start: "0 8%",
+      end: "+=2900 top",
+      scrub: 1,
+    }
+  });
+
+  image15.fromTo(".image15", {
+    scale: '0.4',
+    z: '-120px',
+    x: '0',
+    y: '0',
+    opacity: 0.8,
+  }, {
+    scale: '1',
+    z: '500px',
+    x: '300%',
+    y: '-350%',
+    opacity: 1,
+  });
+
+  var image16 = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.my-projects',
+      start: "0 8%",
+      end: "+=2800 top",
+      scrub: 1,
+    }
+  });
+
+  image16.fromTo(".image16", {
+    scale: '0.4',
+    z: '-120px',
+    y: '100px',
+    opacity: 0.8,
+  }, {
+    scale: '1.2',
+    z: '300%',
+    y: '550%',
+    opacity: 1,
+    duration: 13
+  });
+</script>
+
+<style>
+
+  .my-projects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100svh;
+    overflow: hidden;
+  }
+
+  .line{
+    position: absolute;
+    height: 100%;
+    width: 1px;
+    background-color: black;
+    top: 0;
+  }
+
+  .line1{
+    left: 10%;
+  }
+
+  .line2{
+    left: 50%;
+  }
+
+  .line3{
+    left: 90%;
+  }
+
+  .work {
+    background-color: var(--body-bg);
+    position: relative;
+  }
+
+  .wallpaper{
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .4;
+  }
+
+  .work-list {
+    display: grid;
+    /*grid-template-columns: repeat(auto-fit, minmax(min-content, 500px));*/
+    grid-template-columns: 1fr 1fr;
+    max-width: 1400px;
+    margin: 0 auto;
+    column-gap: 200px;
+    row-gap: 200px;
+    padding-top: 100px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .work-title {
+    font-size: 2.4svw;
+    font-family: "satoshi";
+    text-transform: uppercase;
+    backdrop-filter: blur(4px);
+    font-weight: 800;
+    color: black;
+    width: 100%;
+    line-height: 1.2;
+    text-align: center;
+    margin: 0 auto;
+    z-index: 10;
+    position: relative;
+    max-width: 900px;
+  }
+
+  .work-title span {
+    background-color: rgb(var(--accent));
+    padding: 10px 10px 5px 10px;
+    display: inline-block;
+    transform: rotate(-4deg);
+    text-decoration: underline;
+    box-shadow: 0px 0px 16px 4px rgba(var(--accent), .6);
+  }
+
+  .work-images-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100svh;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .work-images {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    width: 80%;
+    margin: 0 auto;
+    column-gap: 30px;
+    row-gap: 30px;
+    perspective: 3500px;
+  }
+
+  .lights {
+    min-height: 100svh;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .work-images>div {
+    text-size-adjust: 100%;
+    transform-style: preserve-3d;
+    transform-origin: 50% 50%;
+    width: 100%;
+    height: 200px;
+  }
+
+
+  .image1 {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+
+  .image2 {
+    grid-area: 2 / 1 / 3 / 2;
+  }
+
+  .image3 {
+    grid-area: 3 / 1 / 4 / 2;
+  }
+
+  .image4 {
+    grid-area: 4 / 1 / 5 / 2;
+  }
+
+  .image5 {
+    grid-area: 1 / 2 / 2 / 3;
+  }
+
+  .image6 {
+    grid-area: 2 / 2 / 3 / 3;
+  }
+
+  .image7 {
+    grid-area: 3 / 2 / 4 / 3;
+  }
+
+  .image8 {
+    grid-area: 4 / 2 / 5 / 3;
+  }
+
+  .image9 {
+    grid-area: 1 / 3 / 2 / 4;
+  }
+
+  .image10 {
+    grid-area: 2 / 3 / 3 / 4;
+  }
+
+  .image11 {
+    grid-area: 3 / 3 / 4 / 4;
+  }
+
+  .image12 {
+    grid-area: 4 / 3 / 5 / 4;
+  }
+
+  .image13 {
+    grid-area: 1 / 4 / 2 / 5;
+  }
+
+  .image14 {
+    grid-area: 2 / 4 / 3 / 5;
+  }
+
+  .image15 {
+    grid-area: 3 / 4 / 4 / 5;
+  }
+
+  .image16 {
+    grid-area: 4 / 4 / 5 / 5;
+  }
+
+  .work-container {
+    position: relative;
+  }
+
+  .work-item {
+    height: 100%;
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    container: card / size;
+    container-name: card;
+    font-size: 40px;
+    text-align: center;
+    line-height: 1;
+  }
+
+  .card-board {
+    background-color: rgba(255, 255, 255, .15);
+    backdrop-filter: blur(10px);
+    transform: translateZ(30px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    padding: 30px 40px;
+    position: absolute;
+    border: 1px solid rgba(255, 255, 255, .4);
+  }
+
+  .card-board-top p strong {
+    font-size: 24px;
+  }
+
+
+  .card-board-bottom {
+    bottom: 0px;
+    right: 0px;
+  }
+
+  .card-board-bottom {
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+  }
+
+  .card-board-top {
+    top: 0px;
+    left: 0px;
+    padding: 25px;
+  }
+
+  .work-item p {
+    transform: translateZ(30px);
+    font-weight: 200;
+    color: white;
+    text-align: left;
+  }
+
+  .work-item-img {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid black;
+  }
+
+  @media(max-width: 50em) {
+    .work-title {
+      font-size: 4svw;
+    }
+
+    .work-item-img {
+      min-width: 150px;
+      height: 150px;
+    }
+  }
+</style>

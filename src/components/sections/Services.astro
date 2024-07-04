@@ -1,0 +1,884 @@
+---
+import LottieAnimation from "astro-integration-lottie/Lottie.astro";
+import { Image } from 'astro:assets';
+import Walk from '../../assets/images/services/walk.png';
+import Girl from '../../assets/images/services/girl.png';
+import page1 from '../../assets/images/services/3d.jpeg';
+import page2 from '../../assets/images/services/ff.jpeg';
+import page3 from '../../assets/images/services/joint.jpeg';
+import page4 from '../../assets/images/services/oxeye.jpeg';
+import page5 from '../../assets/images/services/kelloggs.jpeg';
+import Manga from '../../assets/images/services/manga.png';
+import TinyRobot from '../../assets/images/services/tiny-robot.png';
+import Fire1 from '../../assets/images/2fx/fire/fire1.svg';
+import Fire2 from '../../assets/images/2fx/fire/fire4.svg';
+import MyProjects from '../../components/sections/MyProjects.astro';
+---
+<div id="services" class="container">
+    <div class="services-lines">
+        <div class="service-top-line"></div>
+        <div class="service-botttom-line"></div>
+        <div class="service-left-line"></div>
+        <div class="service-right-line"></div>
+    </div>
+    <div class="services-list">
+        <p>> páginas web<br />> Creación de contenido<br />> Tours 360</p>
+    </div>
+    <Image src={Fire1} class="fire1" alt="Robot androide con bola de poder" />
+    <Image src={Fire2} class="fire2" alt="Robot androide con bola de poder" />
+    <div class="title-container">
+        <p class="jap">サービス</p>
+        <div class="sticker-container">
+            <h2 class="title">Nuestros Servicios</h2>
+            <p class="sticker">best team!</p>
+        </div>
+    </div>
+    <div class="center">
+        <div class="images-container">
+            <Image src={Walk} class="walk" alt="Robot androide con bola de poder" />
+            <Image src={Girl} class="girl" alt="Robot androide con bola de poder" />
+        </div>
+    </div>
+</div>
+<div id="servicesList">
+    <div class="service">
+        <div class="services-top">
+            <div class="service-title">
+                <h2 class="cyberpunk glitched">01/-> páginas web</h2>
+            </div>
+        </div>
+        <div class="service-content s1">
+            <MyProjects />
+            <div class="bloom">
+                <div class="bloom1"></div>
+                <div class="bloom2"></div>
+                <div class="marquee">
+                    <div>
+                        <h2>CLIENTES</h2>
+                        <h2 class="light">CLIENTES</h2>
+                    </div>
+                </div>
+                <div class="cards">
+                    <div>
+                        <div class="card">
+                            <p class="card-title">3D Modeling</p>
+                            <div class="card-data">
+                                <div class="card-date">
+                                    <p>Dic 2023</p>
+                                </div>
+                                <div class="card-specs">
+                                    <div>
+                                        <p>Para assets unicos</p>
+                                    </div>
+                                    <p>> Assets 3D en Blender</p>
+                                    <p>> Importacion a png</p>
+                                    <p>> Importacion para web con Three JS</p>
+                                </div>
+                            </div>
+                            <div class="card-img">
+                                <Image src={page1} class="page page1" alt="Robot androide con bola de poder" />
+                            </div>
+                        </div>
+                        <div class="card">
+                            <p class="card-title">FreeFire</p>
+                            <div class="card-data">
+                                <div class="card-date">
+                                    <p>MAY 2023</p>
+                                </div>
+                                <div class="card-specs">
+                                    <div>
+                                        <p>Increible pagina gamer</p>
+                                    </div>
+                                    <p>> Pagina web para FreeFire</p>
+                                    <p>> Concurso para Mexico</p>
+                                    <p>> Regalos Gamer</p>
+                                </div>
+                            </div>
+                            <div class="card-img">
+                                <Image src={page2} class="page page1" alt="Robot androide con bola de poder" />
+                            </div>
+                        </div>
+                        <div class="card">
+                            <p class="card-title">Joint Medias</p>
+                            <div class="card-data">
+                                <div class="card-date">
+                                    <p>Sep 2023</p>
+                                </div>
+                                <div class="card-specs">
+                                    <div>
+                                        <p>Portafolio Creativo</p>
+                                    </div>
+                                    <p>> Enlista los proyectos de Joint</p>
+                                    <p>> Diseno creativo</p>
+                                    <p>> Burbuja 3D [Blob]</p>
+                                </div>
+                            </div>
+                            <div class="card-img">
+                                <Image src={page3} class="page page1" alt="Robot androide con bola de poder" />
+                            </div>
+                        </div>
+                        <div class="card">
+                            <p class="card-title">Studio Oxeye</p>
+                            <div class="card-data">
+                                <div class="card-date">
+                                    <p>Feb 2023</p>
+                                </div>
+                                <div class="card-specs">
+                                    <div>
+                                        <p>Despacho de Arquitectos</p>
+                                    </div>
+                                    <p>> Web enfocada en su branding</p>
+                                    <p>> Animaciones on scroll</p>
+                                    <p>> Pagina Minimalista y limpia</p>
+                                </div>
+                            </div>
+                            <div class="card-img">
+                                <Image src={page4} class="page page1" alt="Robot androide con bola de poder" />
+                            </div>
+                        </div>
+                        <div class="card">
+                            <p class="card-title">Kellogg's</p>
+                            <div class="card-data">
+                                <div class="card-date">
+                                    <p>Jun 2024</p>
+                                </div>
+                                <div class="card-specs">
+                                    <div>
+                                        <p>Concurso para Mexico</p>
+                                    </div>
+                                    <p>> Pagina para registrar productos</p>
+                                    <p>> Premios Increibles</p>
+                                </div>
+                            </div>
+                            <div class="card-img">
+                                <Image src={page5} class="page page1" alt="Robot androide con bola de poder" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="service">
+        <div class="tiny-robot" >
+            <Image src={TinyRobot} alt="Robot androide con bola de poder" />
+        </div>
+        <div class="services-top">
+            <div class="service-title">
+                <h2 class="cyberpunk glitched">02/-> Creación de Contenido</h2>
+            </div>
+        </div>
+        <div class="service-content s2">
+            <p class="s2-p1">Creamos videos para tu negocio con transiciones increíbles y <span>efectos especiales</span></p>
+            <div class="vid-container">
+                <div class="vid">
+                    <Image src={Manga} class="manga-texture" alt="Mnaga texture" />
+                    <video loop autoplay muted>
+                        <source src="./videos/vid1.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="vid">
+                    <Image src={Manga} class="manga-texture" alt="Mnaga texture" />
+                    <video loop autoplay muted>
+                        <source src="./videos/vid2.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="vid">
+                    <Image src={Manga} class="manga-texture" alt="Mnaga texture" />
+                    <video loop autoplay muted>
+                        <source src="./videos/vid3.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="vid">
+                    <Image src={Manga} class="manga-texture" alt="Mnaga texture" />
+                    <video loop autoplay muted>
+                        <source src="./videos/vid4.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+        <div class="service s3">
+            <div class="services-top">
+                <div class="service-title">
+                    <h2 class="cyberpunk glitched">03/-> Tours 3D</h2>
+                </div>
+            </div>
+            <div class="build">
+                <svg version="1.1" id="title" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 290 25"
+                    style="enable-background:new 0 0 290 25;" xml:space="preserve">
+                    <style type="text/css">
+                        .st0 {
+                            font-family: 'thunder';
+                        }
+
+                        .st1 {
+                            font-size: 32px;
+                        }
+                    </style>
+                    <text transform="matrix(1 0 0 1 2.311 23.8809)" class="st0 st1">CON CAMARA PROFESIONAL 360</text>
+                </svg>
+
+                <video loop autoplay muted class="kid">
+                    <source src="./public/videos/3d.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="s3-p2">
+                    Podrás tener un tour virtual del establecimiento que tengas en mente, para que tus clientes puedan
+                    ver el lugar sin tener que estar ahí. Ideal para cualquier tipo de renta.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    import gsap from "gsap";
+    import {
+        ScrollTrigger
+    } from "gsap/ScrollTrigger";
+    gsap.registerPlugin(ScrollTrigger);
+
+    function Marquee(selector, speed) {
+        const parentSelector = document.querySelector(selector);
+        const clone = parentSelector.innerHTML;
+        const firstElement = parentSelector.children[0];
+        let i = 0;
+        console.log(firstElement);
+        parentSelector.insertAdjacentHTML('beforeend', clone);
+        parentSelector.insertAdjacentHTML('beforeend', clone);
+
+        setInterval(function () {
+            firstElement.style.marginLeft = `-${i}px`;
+            if (i > firstElement.clientWidth) {
+                i = 0;
+            }
+            i = i + speed;
+        }, 0);
+    }
+
+    Marquee('.marquee', 0.5)
+    Marquee('.cards', 0.2)
+</script>
+
+<style>
+    .tiny-robot{
+        transform: translateY(-50%);
+        position: relative;
+        z-index: 12;
+        display: flex;
+        position: absolute;
+        right: 0;
+    }
+
+    .tiny-robot img{
+        height: 400px;
+        width: auto;
+        margin-left: auto;
+    }
+
+    .bloom{
+        position: relative;
+        background-color: #000;
+        overflow: hidden;
+        padding: 100px 0;
+    }
+
+    .bloom1{
+        background-color: rgba(var(--accent), .5);
+        width: 0px;
+        height: 0px;
+        position: absolute;
+        border-radius: 50%;
+        z-index: 1;
+        box-shadow: 0px 0px 520px 530px rgba(var(--accent), .5);
+        bottom: 0;
+    }
+
+    .bloom2{
+        background-color: rgba(var(--accent), .5);
+        width: 0px;
+        height: 0px;
+        position: absolute;
+        border-radius: 50%;
+        z-index: 1;
+        box-shadow: 0px 0px 520px 530px rgba(142, 68, 173, 0.5);
+        right: 0;
+    }
+
+    .cards {
+        padding: 100px 0;
+        column-gap: 100px;
+        overflow: hidden;
+        display: flex;
+        position: relative;
+        z-index: 10;
+    }
+
+    .cards>div {
+        display: flex;
+        column-gap: 100px;
+    }
+
+    .card p,
+    .card div {
+        color: white;
+    }
+
+    .card {
+        background: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        padding: 20px;
+        width: 350px;
+    }
+
+    .card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        margin-top: 30px;
+    }
+
+    .card-title {
+        font-family: "satoshi";
+        text-transform: uppercase;
+        font-size: 40px;
+        margin: 0;
+        line-height: 1;
+        padding: 30px 0;
+    }
+
+    .card-data {
+        display: grid;
+        grid-template-columns: 100px 1fr;
+        align-items: center;
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
+    }
+
+    .card-date {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-right: 1px solid white;
+    }
+
+    .card-date p {
+        font-family: "thunder";
+        text-transform: uppercase;
+        font-size: 40px;
+        letter-spacing: 2px;
+    }
+
+    .card-specs {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        height: 100%;
+    }
+
+    .card-specs div {
+        background-color: rgb(var(--accent));
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+    }
+
+    .card-specs div p {
+        text-align: center;
+        color: black;
+        font-weight: 800;
+        font-size: 16px;
+    }
+
+    .card-specs p {
+        margin: 0;
+        margin-left: auto;
+        font-size: 12px;
+        text-align: right;
+    }
+
+    .marquee {
+        overflow: hidden;
+        display: flex;
+        color: white;
+        column-gap: 100px;
+        padding-top: 50px;
+        position: relative;
+        z-index: 10;
+    }
+
+    .marquee>div {
+        display: flex;
+        column-gap: 100px;
+    }
+
+    .marquee h2 {
+        font-size: 10svw;
+        white-space: nowrap;
+        text-transform: uppercase;
+        font-family: "thunder";
+        margin: 0;
+    }
+
+    .marquee h2.light {
+        color: rgb(var(--accent));
+    }
+
+    .service-content {
+        position: relative;
+    }
+
+    .services-list {
+        position: absolute;
+        right: 30px;
+        bottom: 0px;
+        font-size: 12px;
+    }
+
+    .services-list p {
+        text-transform: uppercase
+    }
+
+    #services {
+        position: relative;
+        padding-bottom: 50px;
+        overflow: hidden;
+    }
+
+    .services-lines {
+        position: absolute;
+        inset: 0
+    }
+
+    .service-top-line {
+        position: absolute;
+        left: 50%;
+        height: 40px;
+        width: 1px;
+        background-color: black;
+    }
+
+    .service-botttom-line {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        height: 40px;
+        width: 1px;
+        background-color: black;
+    }
+
+    .service-left-line {
+        position: absolute;
+        top: 50%;
+        left: 30px;
+        height: 1px;
+        width: 40px;
+        background-color: black;
+    }
+
+    .service-right-line {
+        position: absolute;
+        top: 50%;
+        right: 30px;
+        height: 1px;
+        width: 40px;
+        background-color: black;
+    }
+
+    .fire1 {
+        position: absolute;
+        bottom: 0;
+        transform: translateX(-50%);
+        width: 100%;
+        left: 0;
+        right: 0;
+    }
+
+    .fire2 {
+        position: absolute;
+        width: 300px;
+        right: -150px;
+    }
+
+    .service-padding,
+    .services-top {
+        padding: 0 30px
+    }
+
+    .services-top {
+        margin-top: 100px;
+        overflow: hidden;
+    }
+
+    .service-padding {
+        padding: 0 30px;
+    }
+
+    .kid {
+        width: 100%;
+    }
+
+    .title-container {
+        transform: translateY(130px);
+        position: relative;
+        text-align: center;
+    }
+
+    #title {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .thunder {
+        position: absolute;
+        top: 0;
+        width: 200px;
+        left: calc(50% - 150px);
+        transform: rotate(180deg);
+    }
+
+    .sticker-container {
+        position: relative;
+        text-align: center;
+        display: inline-block;
+    }
+
+    .sticker-container h3 {
+        display: inline-block;
+    }
+
+    .sticker {
+        font-family: "VT323", monospace;
+        font-size: 12px;
+        background-color: white;
+        display: inline-block;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        padding: 4px;
+        border: 1px solid black;
+    }
+
+    .title {
+        font-family: "thunder";
+        font-size: 7svw;
+        text-transform: uppercase;
+        line-height: 1;
+        margin: 0;
+        color: rgb(var(--accent));
+        text-align: center;
+    }
+
+    .center {
+        text-align: center;
+    }
+
+    .jap {
+        text-align: center;
+    }
+
+    .images-container {
+        position: relative;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(20px);
+    }
+
+    .walk {
+        position: relative;
+        width: 500px;
+        height: auto;
+        z-index: -1;
+    }
+
+    .girl {
+        position: absolute;
+        inset: 0;
+        z-index: 5;
+        width: 100%;
+        height: 100%;
+    }
+
+    h2 {
+        font-family: "VT323", monospace;
+    }
+
+    .service {
+        position: relative;
+    }
+
+    .service-title h2 {
+        margin: 0;
+        font-size: 3svw;
+        text-transform: uppercase;
+        z-index: 2;
+        position: relative;
+        display: inline-block;
+        padding-right: 20px;
+        width: 100%;
+    }
+
+    .service-title {
+        position: relative;
+        margin-bottom: 50px;
+    }
+
+    .s1-p1 {
+        font-family: "thunder";
+        font-size: 70px;
+        max-width: 1000px;
+    }
+
+    .s1-p1 span {
+        background-color: rgb(var(--accent));
+        padding: 10px 10px 5px 10px;
+        display: inline-block;
+        transform: rotate(-4deg);
+        text-decoration: underline;
+        box-shadow: 0px 0px 16px 4px rgba(var(--accent), .6);
+    }
+
+    .s1 {
+        margin-bottom: 50px;
+    }
+
+    .s2 {
+        max-width: 1220px;
+        margin: 0 auto;
+    }
+
+    .vid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        column-gap: 30px;
+        margin-top: 4em;
+    }
+
+    .s2 .vid {
+        border: 1px solid black;
+        position: relative;
+        opacity: .9;
+    }
+
+    .s2 video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .s2-p1 {
+        font-family: "thunder";
+        font-size: 60px;
+        max-width: 800px;
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 100px;
+        text-transform: uppercase;
+    }
+
+    .s2-p1 span{
+        background-color: rgb(var(--accent));
+        padding: 10px 10px 5px 10px;
+        display: inline-block;
+        transform: rotate(-4deg);
+        text-decoration: underline;
+        box-shadow: 0px 0px 16px 4px rgba(var(--accent), .6);
+    }
+
+    .manga-texture {
+        position: absolute;
+        inset: 0;
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+        z-index: 9;
+    }
+
+    .s3-p1 {
+        font-family: "thunder";
+        font-size: 10.3svw;
+        margin: 0;
+        line-height: 1;
+    }
+
+    .s3 {
+        margin-top: 100px;
+    }
+
+    .s3-p2 {
+        font-size: 18px;
+        text-align: right;
+        max-width: 900px;
+        margin-left: auto;
+        padding-right: 30px;
+    }
+</style>
+
+<style>
+    :root {
+        --glitched-duration: 0.9s;
+        --glitched-long-duration: 3s;
+    }
+
+    h2.cyberpunk,
+        {
+        font-size: 2rem;
+        line-height: 2.2rem;
+        font-weight: 200;
+        position: relative;
+        padding-bottom: 15px;
+    }
+
+    h2.cyberpunk:before {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: 0px;
+        left: 2px;
+        width: 100%;
+        height: 10px;
+        background-color: #000;
+        clip-path: polygon(0px 0px, 85px 0px, 90px 5px, 100% 5px, 100% 6px, 85px 6px, 80px 10px, 0px 10px);
+    }
+
+    h2.cyberpunk.glitched {
+        animation-name: h1glitched;
+        animation-duration: calc(var(--glitched-duration) * 1.4);
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+
+    @keyframes h1glitched {
+        0% {
+            transform: skew(-20deg);
+            left: -4px;
+        }
+
+        10% {
+            transform: skew(-20deg);
+            left: -4px;
+        }
+
+        11% {
+            transform: skew(0deg);
+            left: 2px;
+        }
+
+        50% {
+            transform: skew(0deg);
+        }
+
+        51% {
+            transform: skew(10deg);
+        }
+
+        59% {
+            transform: skew(10deg);
+        }
+
+        60% {
+            transform: skew(0deg);
+        }
+
+        100% {
+            transform: skew(0deg);
+        }
+    }
+
+    h2.cyberpunk.glitched:before {
+        animation-name: h1beforeglitched;
+        animation-duration: calc(var(--glitched-duration) * 2);
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        bottom: -10px;
+    }
+
+    @keyframes h1beforeglitched {
+        0% {
+            transform: skew(-20deg);
+            left: -4px;
+            clip-path: polygon(0px 0px, 85px 0px, 90px 5px, 100% 5px, 100% 6px, 85px 6px, 80px 10px, 0px 10px);
+        }
+
+        10% {
+            transform: skew(-20deg);
+            left: -4px;
+            clip-path: polygon(0px 0px, 85px 0px, 90px 5px, 100% 5px, 100% 6px, 85px 6px, 80px 10px, 0px 10px);
+        }
+
+        11% {
+            transform: skew(0deg);
+            left: 2px;
+            clip-path: polygon(0px 0px, 85px 0px, 90px 5px, 100% 5px, 100% 6px, 85px 6px, 80px 10px, 0px 10px);
+        }
+
+        50% {
+            transform: skew(0deg);
+            clip-path: polygon(0px 0px, 85px 0px, 90px 5px, 100% 5px, 100% 6px, 85px 6px, 80px 10px, 0px 10px);
+        }
+
+        51% {
+            transform: skew(0deg);
+            clip-path: polygon(0px 0px, 85px 0px, 90px 5px, 100% 5px, 40% 5px, calc(40% - 30px) 0px, calc(40% + 30px) 0px, calc(45% - 15px) 5px, 100% 5px, 100% 6px, calc(45% - 14px) 6px, calc(40% + 29px) 1px, calc(40% - 29px) 1px, calc(40% + 1px) 6px, 85px 6px, 80px 10px, 0px 10px);
+        }
+
+        59% {
+            transform: skew(0deg);
+            clip-path: polygon(0px 0px, 85px 0px, 90px 5px, 100% 5px, 40% 5px, calc(40% - 30px) 0px, calc(40% + 30px) 0px, calc(45% - 15px) 5px, 100% 5px, 100% 6px, calc(45% - 14px) 6px, calc(40% + 29px) 1px, calc(40% - 29px) 1px, calc(40% + 1px) 6px, 85px 6px, 80px 10px, 0px 10px);
+        }
+
+        60% {
+            transform: skew(0deg);
+            clip-path: polygon(0px 0px, 85px 0px, 90px 5px, 100% 5px, 100% 6px, 85px 6px, 80px 10px, 0px 10px);
+        }
+
+        100% {
+            transform: skew(0deg);
+            clip-path: polygon(0px 0px, 85px 0px, 90px 5px, 100% 5px, 100% 6px, 85px 6px, 80px 10px, 0px 10px);
+        }
+    }
+
+    h2.cyberpunk:before {
+        clip-path: polygon(0px 5px, 35px 5px, 40px 0px, 85px 0px, 90px 5px, 100% 5px, 100% 6px, 85px 6px, 80px 10px, 20px 10px, 15px 6px, 0px 6px);
+    }
+
+    h2.cyberpunk:after {
+        content: "_";
+        animation-name: hxafter;
+        animation-duration: var(--glitched-duration);
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+
+    @keyframes hxafter {
+        0% {
+            opacity: 0;
+        }
+
+        50% {
+            opacity: 0;
+        }
+
+        51% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    /* Separator */
+</style>
