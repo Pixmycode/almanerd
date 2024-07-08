@@ -1,12 +1,13 @@
 ---
 import { Image } from 'astro:assets';
 import Whats from '../../assets/images/contact/whats.svg';
+import Wave from '../../assets/images/contact/wave.png';
 ---
 
 <div id="contact">
-    <h2 class="title">Descubre como podemos ayudar a tu negocio</h2>
-    <p class="subtitle">Contactanos llenando el formulario</p>
-    <form action="https://api.web3forms.com/submit" method="POST" id="contact">
+    <Image src={Wave} class="wave" alt="Paper image" />
+    <h2 class="title">Descubre como podemos<br />ayudar a tu negocio</h2>
+    <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
 
         <!-- Replace with your Access Key -->
         <input type="hidden" name="access_key" value="d90f3a0f-a984-4258-b007-230986f6bc34">
@@ -64,9 +65,26 @@ import Whats from '../../assets/images/contact/whats.svg';
 
 <style>
     #contact {
-        padding: 100px 0px;
-        max-width: 1200px;
+        position: relative;
+        padding-top: 100px;
+        overflow: hidden;
+    }
+
+    #contactForm{
+        max-width: 800px;
         margin: 0 auto;
+        position: relative;
+        z-index: 1;
+    }
+
+    .wave{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 400px;
+        height: auto;
+        object-fit: contain;
+        z-index: 0;
     }
 
     h2 {
@@ -74,15 +92,8 @@ import Whats from '../../assets/images/contact/whats.svg';
         margin: 0;
         line-height: 1;
         font-family: "thunder";
-        font-size: 60px;
+        font-size: 80px;
         text-transform: uppercase;
-        margin: 0;
-    }
-
-    .subtitle {
-        font-family: "satoshi";
-        text-align: center;
-        font-size: 30px;
         margin: 0;
     }
 
@@ -92,7 +103,9 @@ import Whats from '../../assets/images/contact/whats.svg';
         grid-template-rows: repeat(3, 1fr);
         grid-column-gap: 0px;
         grid-row-gap: 0px;
-        column-gap: 50px;
+        column-gap: 100px;
+        max-width: 800px;
+        margin: 0 auto;
     }
 
     .name {
@@ -113,7 +126,8 @@ import Whats from '../../assets/images/contact/whats.svg';
 
     input, textarea{
         width: 100%;
-        padding: 10px;
+        padding: 20px;
+        border: 1px solid black;
     }
 
     .h-captcha{
@@ -176,8 +190,9 @@ import Whats from '../../assets/images/contact/whats.svg';
     }
 
     .wats span{
-        font-size: 60px;
+        font-size: 40px;
         text-transform: uppercase;
         text-align: center;
+        font-family: "satoshi";
     }
 </style>
