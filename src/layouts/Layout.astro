@@ -1,45 +1,58 @@
 ---
 interface Props {
-	title: string;
+title: string;
 }
 
 const { title } = Astro.props;
+import Navbar from '../components/sections/Navbar.astro';
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta property="og:image" content="/share.jpeg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<div class="grain"></div>
-		<slot />
-	</body>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="description" content="Tejemos magia en cada píxel" />
+	<meta name="viewport" content="width=device-width" />
+	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+	<meta property="og:image" content="/share.jpeg" />
+	<meta name="generator" content={Astro.generator} />
+	<title>{title}</title>
+</head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3WRLPS3SVN"></script>
+<script is:inline>
+	window.dataLayer = window.dataLayer || [];
+	function gtag() {
+		dataLayer.push(arguments);
+	}
+	gtag('js', new Date());
+	gtag('config', 'G-3WRLPS3SVN');
+</script>
+
+<body>
+	<Navbar />
+	<div class="grain"></div>
+	<slot />
+</body>
+
 </html>
 <style is:global>
 	@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&family=VT323&display=swap');
+
 	/*
 		font-family: "VT323", monospace;
         font-family: "Ubuntu Sans Mono", monospace;
 	*/
 	:root {
-		--body:white;
+		--body: white;
 		--accent: 50, 252, 199;
 		/*32FCC7*/
 		--accent-light: 224, 204, 250;
 		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(rgb(var(--accent))),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
+		--accent-gradient: linear-gradient(45deg,
+				rgb(rgb(var(--accent))),
+				rgb(var(--accent-light)) 30%,
+				white 60%);
 	}
 
 	@font-face {
@@ -57,75 +70,99 @@ const { title } = Astro.props;
 		src: url("/fonts/Satoshi-Light.woff");
 	}
 
-	body{
+	body {
 		margin: 0;
 		background-color: white;
 	}
 
-	.grain{
-        height: 100vh;
-        pointer-events: none;
-        position: fixed;
+	.grain {
+		height: 100vh;
+		pointer-events: none;
+		position: fixed;
 		inset: 0;
-        width: 100vw;
-        z-index: -1;
+		width: 100vw;
+		z-index: -1;
 	}
 
 	.grain:before {
-        animation: bg-animation 8s steps(10) infinite;
-        background-image: url("../assets/images/body-bg.webp");
-        background-repeat: repeat;
-        background-size: 128px;
-        content: "";
-        display: block;
-        height: 300%;
-        opacity: .15;
-        transform: translate(-10%, -10%);
-        width: 300%;
-    }
+		animation: bg-animation 8s steps(10) infinite;
+		background-image: url("../assets/images/body-bg.webp");
+		background-repeat: repeat;
+		background-size: 128px;
+		content: "";
+		display: block;
+		height: 300%;
+		opacity: .15;
+		transform: translate(-10%, -10%);
+		width: 300%;
+	}
 
 	@keyframes bg-animation {
-		0%, 100% {
+
+		0%,
+		100% {
 			transform: translate(0);
 		}
+
 		10% {
 			transform: translate(-5%, -11%);
 		}
+
 		20% {
 			transform: translate(-12%, -6%);
 		}
+
 		30% {
 			transform: translate(-7%, -23%);
 		}
+
 		40% {
 			transform: translate(-5%, -27%);
 		}
+
 		50% {
 			transform: translate(-14%, -11%);
 		}
+
 		60% {
 			transform: translate(-17%, -1%);
 		}
+
 		70% {
 			transform: translate(1%, -13%);
 		}
+
 		80% {
 			transform: translate(-3%, -32%);
 		}
+
 		90% {
 			transform: translate(-11%, -12%);
 		}
 	}
 
-	.accent{
+	.accent {
 		color: rgb(var(--accent));
 	}
 
-	p, li, input,textarea{
-        font-family: "Ubuntu Sans Mono", monospace;
+	p,
+	li,
+	input,
+	textarea {
+		font-family: "Ubuntu Sans Mono", monospace;
 	}
 
-	h3{
+	h3 {
 		font-family: "VT323", monospace;
+	}
+
+    .splide__arrow{
+        background-color: black !important;
+		border-radius: 0 !important;
+		opacity: 1 !important;
+    }
+
+	.splide__arrow svg{
+		fill: white !important;
 	}
 </style>

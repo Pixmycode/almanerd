@@ -28,20 +28,18 @@ import Logo from '../../assets/images/logo.svg';
                     class="accent">]</span> se refiere a un sistema de mejora continua en el que las pequeñas, pero
                 constantes mejoras, acumulan tras de sí grandes beneficios.</p>
             <div class="about-bottom">
-                <div>
+                <div class="text-decoration">
                     <p>00000000////</p>
                     <p>18:02:30 [watch] /src/components/sections/About.astro?astro&type=style&index=0&lang.css</p>
                     <p>18:02:30 [watch] /src/components/sections/About.astro?astro&type=style&index=0&lang.css</p>
                 </div>
                 <div>
                     <ul class="list">
-                        <li class="about-txt">> Tenemos mas de 8 anios de experiencia</li>
-                        <li class="about-txt">> Creando proyectos unicos desde el 2016</li>
-                        <li class="about-txt">> Somos creativos, somos unicos, somos alma nerd</li>
-                        <li class="about-txt">> .[]//FILE LOST npm run dev ...running</li>
-                        <li class="about-txt">> keep scrolling
-                            <Image src={Arrow} class="arrow" alt="Arrow pointing down" />
-                            <Image src={Arrow} class="arrow" alt="Arrow pointing down" />
+                        <li class="about-txt">Tenemos más de 8 años de experiencia</li>
+                        <li class="about-txt">Creando proyectos únicos desde el 2016</li>
+                        <li class="about-txt">Somos creativos, somos únicos, somos Alma Nerd</li>
+                        <li class="about-txt">.[]//FILE LOST npm run dev ...running</li>
+                        <li class="about-txt">keep scrolling
                             <Image src={Arrow} class="arrow" alt="Arrow pointing down" />
                             <Image src={Arrow} class="arrow" alt="Arrow pointing down" />
                             <Image src={Arrow} class="arrow" alt="Arrow pointing down" />
@@ -106,6 +104,19 @@ import Logo from '../../assets/images/logo.svg';
         width: 20px;
         height: auto;
         display: inline-block;
+        animation: arrowBotto 2s ease infinite;
+    }
+
+    @keyframes arrowBotto {
+        0%{
+            transform: translateY(0);
+        }
+        20%{
+            transform: translateY(5px);
+        }
+        40%{
+            transform: translateY(0);
+        }
     }
 
     .about-txt {
@@ -123,6 +134,8 @@ import Logo from '../../assets/images/logo.svg';
     li {
         list-style-type: none;
         margin-bottom: 10px;
+        list-style-type: ">";
+        padding-left: 10px;
     }
 
     .about-container {
@@ -245,8 +258,16 @@ import Logo from '../../assets/images/logo.svg';
             font-size: 25px;
         }
 
+        .kaisen{
+            padding-right: 50px;
+        }
+
         .about-txt{
-            font-size: 11px;
+            font-size: 14px;
+        }
+
+        .about-bottom{
+            font-size: 7px;
         }
 
         .about-left p{
@@ -254,7 +275,8 @@ import Logo from '../../assets/images/logo.svg';
         }
 
         #aboutTitle{
-            font-size: 60px;
+            font-size: 50px;
+            padding: 30px 0 20px 0;
         }
 
         .about-content{
@@ -264,8 +286,22 @@ import Logo from '../../assets/images/logo.svg';
     
     @media only screen and (max-width: 680px) {
         .about-text{
-            font-size:22px;
+            font-size:18px;
             margin-bottom: 30px;
+            margin-top: 20px;
+        }
+
+        .about-bottom{
+            padding-right: 50px;
+        }
+
+        .text-decoration{
+            display: none;
+        }
+
+        .logo{
+            width: 20px;
+            height: 20px;
         }
 
         .about-left p{

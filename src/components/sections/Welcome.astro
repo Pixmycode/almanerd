@@ -32,35 +32,11 @@ import Logo from '../../assets/images/logo.svg';
     <Image src={CloudRight} class="cloud cloud-right" alt="Manga cloud Right" />
 </div>
 
-<script is:inline>
-    let letter = 0;
-    function typeText(id, text) {
-      if (letter < text.length) {
-        document.getElementById(`${id}`).innerHTML += text.charAt(letter);
-        letter++;
-        let speed = Math.floor(Math.random() * 150) + 50;
-        setTimeout(() => {
-            typeText(id, text);
-        }, speed);
-      }
-    }
-    setTimeout(() => {
-        document.getElementById("h3Top").innerHTML = ""
-        typeText("h3Top", "Alma");
-    }, 2000);
-
-    setTimeout(() => {
-        letter = 0
-        document.getElementById("h3Bottom").innerHTML = ""
-        typeText("h3Bottom", "Nerd");
-    }, 3000);
-</script>
-
 <style>
     #welcome {
         border-bottom: 1px solid black;
         height: calc(100svh + 100px);
-        min-height: 900px;
+        min-height: 800px;
         width: 100%;
         position: relative;
         overflow: hidden;
@@ -72,6 +48,36 @@ import Logo from '../../assets/images/logo.svg';
     h1 {
         font-family: "thunder";
         color: black;
+    }
+
+    #h3Top{
+        transform: translateX(-100%);
+        display: inline-block;
+        animation: textIn 1s ease forwards;
+    }
+
+    #h3Bottom{
+        transform: translateX(100%);
+        display: inline-block;
+        animation: textIn2 1s ease forwards;
+    }
+
+    @keyframes textIn {
+        0%{
+            transform: translateX(-200%);
+        }
+        100%{
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes textIn2 {
+        0%{
+            transform: translateX(200%);
+        }
+        100%{
+            transform: translateX(0);
+        }
     }
 
     .logo{
@@ -283,6 +289,18 @@ import Logo from '../../assets/images/logo.svg';
     }
     
     @media only screen and (max-width: 630px) {
+        #welcome {
+            height: 90svh;
+        }
+
+        .logo{
+            width: 40px;
+        }
+
+        .cloud{
+            width: 52%;
+        }
+
         .welcome-title h3 {
             font-size: 32svw;
         }

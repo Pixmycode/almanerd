@@ -69,16 +69,6 @@
   } from "gsap/ScrollTrigger";
   gsap.registerPlugin(ScrollTrigger);
 
-  gsap.to('.my-projects', {
-    scrollTrigger: {
-      trigger: '.my-projects',
-      start: "0 0",
-      end: "+=1000",
-      scrub: 1,
-      pin: true,
-    },
-  })
-
   var image = gsap.timeline({
     scrollTrigger: {
       trigger: '.my-projects',
@@ -538,7 +528,6 @@
     font-size: 2.8svw;
     font-family: "satoshi";
     text-transform: uppercase;
-    backdrop-filter: blur(4px);
     font-weight: 800;
     color: black;
     width: 100%;
@@ -581,6 +570,12 @@
     column-gap: 30px;
     row-gap: 30px;
     perspective: 3500px;
+    top: 0%;
+    left: 0;
+    right: 0;
+    position: absolute;
+    filter: grayscale(1);
+    opacity: .5;
   }
 
   .lights {
@@ -753,19 +748,34 @@
     
     @media only screen and (max-width: 780px) {
         .work-title{
-          font-size: 40px;
+          font-size: 30px;
+        }
+
+        .work-images{
+          top: -10%;
+          left: -10%;
+          width: 100%;
+          opacity: .4;
         }
     }
     
     @media only screen and (max-width: 680px) {
         .work-title{
-          font-size: 30px;
+          font-size: 28px;
+        }
+
+        .line{
+          opacity: .4;
+        }
+
+        .line2{
+          display: none;
         }
     }
     
     @media only screen and (max-width: 480px) {
         .work-title{
-          font-size: 27px;
+          font-size: 26px;
         }
     }
 </style>

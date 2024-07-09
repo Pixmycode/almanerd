@@ -1,0 +1,305 @@
+---
+import { Image } from 'astro:assets';
+import page1 from '../../assets/images/services/3d.jpeg';
+import page2 from '../../assets/images/services/ff.jpeg';
+import page3 from '../../assets/images/services/joint.jpeg';
+import page4 from '../../assets/images/services/oxeye.jpeg';
+import page5 from '../../assets/images/services/kelloggs.jpeg';
+import TinyRobot from '../../assets/images/services/tiny-robot.png';
+---
+<div id="carousel">
+    <section class="splide" aria-label="Splide Basic HTML Example">
+        <div class="splide__track">
+            <ul class="splide__list">
+                <li class="splide__slide">
+                    <div class="card">
+                        <p class="card-title">3D Modeling</p>
+                        <div class="card-data">
+                            <div class="card-date">
+                                <p>Dic 2023</p>
+                            </div>
+                            <div class="card-specs">
+                                <div>
+                                    <p>Assets únicos</p>
+                                </div>
+                                <p>> Assets 3D en Blender</p>
+                                <p>> Importación a png</p>
+                                <p>> Importación para web con Three JS</p>
+                            </div>
+                        </div>
+                        <div class="card-img">
+                            <Image src={page1} class="page page1" alt="Robot androide con bola de poder" />
+                        </div>
+                    </div>
+                </li>
+                <li class="splide__slide">
+                    <div class="card">
+                        <p class="card-title">FreeFire</p>
+                        <div class="card-data">
+                            <div class="card-date">
+                                <p>MAY 2023</p>
+                            </div>
+                            <div class="card-specs">
+                                <div>
+                                    <p>Increíble página gamer</p>
+                                </div>
+                                <p>> Página web para FreeFire</p>
+                                <p>> Concurso para México</p>
+                                <p>> Regalos Gamer</p>
+                            </div>
+                        </div>
+                        <div class="card-img">
+                            <Image src={page2} class="page page1" alt="Robot androide con bola de poder" />
+                        </div>
+                    </div>
+                </li>
+                <li class="splide__slide">
+                    <div class="card">
+                        <p class="card-title">Joint Medias</p>
+                        <div class="card-data">
+                            <div class="card-date">
+                                <p>Sep 2023</p>
+                            </div>
+                            <div class="card-specs">
+                                <div>
+                                    <p>Portafolio Creativo</p>
+                                </div>
+                                <p>> Enlista los proyectos de Joint</p>
+                                <p>> Diseño creativo</p>
+                                <p>> Burbuja 3D [Blob]</p>
+                            </div>
+                        </div>
+                        <div class="card-img">
+                            <Image src={page3} class="page page1" alt="Robot androide con bola de poder" />
+                        </div>
+                    </div>
+                </li>
+                <li class="splide__slide">
+                    <div class="card">
+                        <p class="card-title">Studio Oxeye</p>
+                        <div class="card-data">
+                            <div class="card-date">
+                                <p>Feb 2023</p>
+                            </div>
+                            <div class="card-specs">
+                                <div>
+                                    <p>Despacho de Arquitectos</p>
+                                </div>
+                                <p>> Web enfocada en su branding</p>
+                                <p>> Animaciones on scroll</p>
+                                <p>> Página Minimalista y limpia</p>
+                            </div>
+                        </div>
+                        <div class="card-img">
+                            <Image src={page4} class="page page1" alt="Robot androide con bola de poder" />
+                        </div>
+                    </div>
+                </li>
+                <li class="splide__slide">
+                    <div class="card">
+                        <p class="card-title">Kellogg's</p>
+                        <div class="card-data">
+                            <div class="card-date">
+                                <p>Jun 2024</p>
+                            </div>
+                            <div class="card-specs">
+                                <div>
+                                    <p>Concurso para México</p>
+                                </div>
+                                <p>> Página para registrar productos</p>
+                                <p>> Premios Increíbles</p>
+                            </div>
+                        </div>
+                        <div class="card-img">
+                            <Image src={page5} class="page page1" alt="Robot androide con bola de poder" />
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <div class="tiny-robot">
+        <Image src={TinyRobot} alt="Robot androide con bola de poder" />
+    </div>
+</div>
+
+<script>
+    import Splide from '@splidejs/splide'
+    import '@splidejs/splide/css';
+
+    var splide = new Splide('.splide', {
+        type: 'loop',
+        focus: 'center',
+        autoWidth: true,
+        pagination: false,
+        autoplay: true,
+    });
+
+    splide.mount();
+</script>
+
+<style>
+    #carousel{
+        position: relative;
+        padding-bottom: 50px;
+    }
+
+    .tiny-robot {
+        position: relative;
+        z-index: 12;
+        display: flex;
+        right: 30px;
+        bottom: 0;
+        position: absolute;
+    }
+
+    .tiny-robot img {
+        height: 250px;
+        width: auto;
+        margin-left: auto;
+    }
+
+    .card p,
+    .card div {
+        color: black;
+    }
+
+    .card {
+        background: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        padding: 20px;
+        width: 350px;
+        margin: 50px 50px 50px 50px;
+        border: 1px solid black;
+    }
+
+    .card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        margin-top: 30px;
+    }
+
+    .card-title {
+        font-family: "satoshi";
+        text-transform: uppercase;
+        font-size: 40px;
+        margin: 0;
+        line-height: 1;
+        padding: 0px 0 20px 0;
+    }
+
+    .card-data {
+        display: grid;
+        grid-template-columns: 100px 1fr;
+        align-items: center;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+    }
+
+    .card-date {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-right: 1px solid black;
+    }
+
+    .card-date p {
+        font-family: "thunder";
+        text-transform: uppercase;
+        font-size: 40px;
+        letter-spacing: 2px;
+    }
+
+    .card-specs {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        height: 100%;
+    }
+
+    .card-specs div {
+        background-color: rgb(var(--accent));
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+    }
+
+    .card-specs div p {
+        text-align: center;
+        color: black;
+        font-weight: 800;
+        font-size: 16px;
+    }
+
+    .card-specs p {
+        margin: 0;
+        margin-left: auto;
+        font-size: 12px;
+        text-align: right;
+    }
+    
+    @media only screen and (max-width: 1100px) {
+        .card-title{
+            font-size: 30px;
+        }
+
+        .card-date{
+            border-right: 0;
+        }
+
+        .card-date p{
+            font-size: 20px;
+        }
+
+        .card-data{
+            grid-template-columns: 1fr;
+            justify-content: flex-start;
+        }
+
+        .card-specs{
+            padding-bottom: 20px;
+            align-items: baseline;
+        }
+
+        .card-specs p{
+            margin-left: initial;
+        }
+
+        .card-specs p:nth-child(2){
+            margin-top: 20px;
+        }
+    }
+
+    
+    @media only screen and (max-width: 880px) {
+        .card{
+            width: 280px;
+        }
+
+        .tiny-robot img{
+            height: 200px;
+        }
+    }
+
+    @media only screen and (max-width: 500px) {
+        .card{
+            width: 250px;
+        }
+
+        #carousel{
+            position: relative;
+            padding-bottom: 50px;
+        }
+        
+        .tiny-robot img{
+            height: 160px;
+        }
+    }
+</style>
