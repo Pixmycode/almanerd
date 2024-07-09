@@ -1,5 +1,4 @@
 ---
-import LottieAnimation from "astro-integration-lottie/Lottie.astro";
 import { Image } from 'astro:assets';
 import Walk from '../../assets/images/services/walk.png';
 import Girl from '../../assets/images/services/girl.png';
@@ -24,8 +23,8 @@ import MyProjects from '../../components/sections/MyProjects.astro';
     <div class="services-list">
         <p>> páginas web<br />> Creación de contenido<br />> Tours 360</p>
     </div>
-    <Image src={Fire1} class="fire1" alt="Robot androide con bola de poder" />
-    <Image src={Fire2} class="fire2" alt="Robot androide con bola de poder" />
+    <Image src={Fire1} class="fire1" alt="Imagen de fuego - decoracion" />
+    <Image src={Fire2} class="fire2" alt="Imagen de fuego - decoracion" />
     <div class="title-container">
         <p class="jap">サービス</p>
         <div class="sticker-container">
@@ -35,8 +34,8 @@ import MyProjects from '../../components/sections/MyProjects.astro';
     </div>
     <div class="center">
         <div class="images-container">
-            <Image src={Walk} class="walk" alt="Robot androide con bola de poder" />
-            <Image src={Girl} class="girl" alt="Robot androide con bola de poder" />
+            <Image src={Walk} class="walking-androids" alt="3 personas caminando" />
+            <Image src={Girl} class="girl" alt="Mujer caminando" />
         </div>
     </div>
 </div>
@@ -160,7 +159,7 @@ import MyProjects from '../../components/sections/MyProjects.astro';
         </div>
     </div>
     <div class="service">
-        <div class="tiny-robot" >
+        <div class="tiny-robot">
             <Image src={TinyRobot} alt="Robot androide con bola de poder" />
         </div>
         <div class="services-top">
@@ -169,7 +168,8 @@ import MyProjects from '../../components/sections/MyProjects.astro';
             </div>
         </div>
         <div class="service-content s2">
-            <p class="s2-p1">Creamos videos para tu negocio con transiciones increíbles y <span>efectos especiales</span></p>
+            <p class="s2-p1">Creamos videos para tu negocio con transiciones increíbles y <span>efectos
+                    especiales</span></p>
             <div class="vid-container">
                 <div class="vid">
                     <Image src={Manga} class="manga-texture" alt="Mnaga texture" />
@@ -224,7 +224,7 @@ import MyProjects from '../../components/sections/MyProjects.astro';
                 </svg>
 
                 <video loop autoplay muted class="kid">
-                    <source src="./public/videos/3d.mp4" type="video/mp4">
+                    <source src="./videos/3d.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
                 <p class="s3-p2">
@@ -266,7 +266,7 @@ import MyProjects from '../../components/sections/MyProjects.astro';
 </script>
 
 <style>
-    .tiny-robot{
+    .tiny-robot {
         transform: translateY(-50%);
         position: relative;
         z-index: 12;
@@ -275,20 +275,20 @@ import MyProjects from '../../components/sections/MyProjects.astro';
         right: 0;
     }
 
-    .tiny-robot img{
+    .tiny-robot img {
         height: 400px;
         width: auto;
         margin-left: auto;
     }
 
-    .bloom{
+    .bloom {
         position: relative;
         background-color: #000;
         overflow: hidden;
         padding: 100px 0;
     }
 
-    .bloom1{
+    .bloom1 {
         background-color: rgba(var(--accent), .5);
         width: 0px;
         height: 0px;
@@ -299,7 +299,7 @@ import MyProjects from '../../components/sections/MyProjects.astro';
         bottom: 0;
     }
 
-    .bloom2{
+    .bloom2 {
         background-color: rgba(var(--accent), .5);
         width: 0px;
         height: 0px;
@@ -494,6 +494,7 @@ import MyProjects from '../../components/sections/MyProjects.astro';
         height: 1px;
         width: 40px;
         background-color: black;
+        z-index: 10;
     }
 
     .fire1 {
@@ -572,7 +573,7 @@ import MyProjects from '../../components/sections/MyProjects.astro';
 
     .title {
         font-family: "thunder";
-        font-size: 7svw;
+        font-size: 150px;
         text-transform: uppercase;
         line-height: 1;
         margin: 0;
@@ -596,7 +597,7 @@ import MyProjects from '../../components/sections/MyProjects.astro';
         transform: translateX(20px);
     }
 
-    .walk {
+    .walking-androids {
         position: relative;
         width: 500px;
         height: auto;
@@ -686,9 +687,10 @@ import MyProjects from '../../components/sections/MyProjects.astro';
         margin: 0 auto;
         margin-top: 100px;
         text-transform: uppercase;
+        padding: 0 30px;
     }
 
-    .s2-p1 span{
+    .s2-p1 span {
         background-color: rgb(var(--accent));
         padding: 10px 10px 5px 10px;
         display: inline-block;
@@ -724,6 +726,96 @@ import MyProjects from '../../components/sections/MyProjects.astro';
         margin-left: auto;
         padding-right: 30px;
     }
+
+
+    @media only screen and (max-width: 780px) {
+        .jap{
+            margin-top: 0;
+        }
+
+        .card-title {
+            font-size: 20px;
+        }
+
+        .cards{
+            padding-bottom: 0;
+        }
+
+        .s3-p2{
+            font-size: 14px;
+            padding-right: 0;
+        }
+
+        .card-date p{
+            font-size: 18px;
+        }
+
+        .card-specs p:nth-child(2){
+            margin-top: 30px;
+        }
+
+        .card-specs > p:last-child{
+            margin-bottom: 10px;
+        }
+
+        .card-specs > div p{
+            font-size: 12px ;
+        }
+
+        .vid-container{
+            grid-template-columns: 1fr 1fr;
+            padding: 0 30px;
+            row-gap: 30px;
+        }
+
+        .build{
+            padding: 0 30px;
+        }
+    }
+
+    @media only screen and (max-width: 630px) {
+        h2.title {
+            font-size: 130px;
+        }
+
+        .sticker {
+            position: relative !important;
+        }
+
+        .fire1 {
+            width: 150px !important;
+            bottom: -20% !important;
+            margin: inherit;
+        }
+
+        .fire2 {
+            width: 200px !important;
+            top: 0 !important;
+            margin: inherit;
+        }
+
+        .marquee h2 {
+            font-size: 100px !important;
+        }
+
+        .bloom {
+            padding-top: 40px !important;
+        }
+
+        .cyberpunk {
+            font-size: 40px !important;
+        }
+
+        .tiny-robot {
+            transform: translateY(-150px);
+            position: relative;
+            height: 100px;
+        }
+
+        .tiny-robot img {
+            height: 300px !important;
+        }
+    }
 </style>
 
 <style>
@@ -732,7 +824,7 @@ import MyProjects from '../../components/sections/MyProjects.astro';
         --glitched-long-duration: 3s;
     }
 
-    h2.cyberpunk,
+    h2.cyberpunk
         {
         font-size: 2rem;
         line-height: 2.2rem;
@@ -879,6 +971,4 @@ import MyProjects from '../../components/sections/MyProjects.astro';
             opacity: 1;
         }
     }
-
-    /* Separator */
 </style>

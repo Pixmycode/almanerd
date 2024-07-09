@@ -2,48 +2,55 @@
 import { Image } from 'astro:assets';
 import Whats from '../../assets/images/contact/whats.svg';
 import Wave from '../../assets/images/contact/wave.png';
+import Paper2 from '../../assets/images/steps/paper2.svg';
 ---
 
-<div id="contact">
-    <Image src={Wave} class="wave" alt="Paper image" />
-    <h2 class="title">Descubre como podemos<br />ayudar a tu negocio</h2>
-    <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
-
-        <!-- Replace with your Access Key -->
-        <input type="hidden" name="access_key" value="d90f3a0f-a984-4258-b007-230986f6bc34">
-
-        <!-- Form Inputs. Each input must have a name="" attribute -->
-        <div class="grid">
-            <div class="row name">
-                <p>Nombre:</p>
-                <input type="text" name="name" required>
-            </div>
-            <div class="row cel">
-                <p>Celular:</p>
-                <input type="tel" name="phone">
-            </div>
-            <div class="row email">
-                <p>Correo electrónico:</p>
-                <input type="email" name="email" required>
-            </div>
-            <div class="row text">
-                <p>Mensaje:</p>
-                <textarea name="message" required></textarea>
-            </div>
+<div id="contactContainer">
+    <Image src={Paper2} class="paper" alt="Paper image" />
+    <div id="contact">
+        <div class="form">
+            <Image src={Wave} class="wave" alt="Paper image" />
+            <h2 class="title">Descubre como podemos<br />ayudar a tu negocio</h2>
+            <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
+        
+                <!-- Replace with your Access Key -->
+                <input type="hidden" name="access_key" value="d90f3a0f-a984-4258-b007-230986f6bc34">
+        
+                <!-- Form Inputs. Each input must have a name="" attribute -->
+                <div class="grid">
+                    <div class="row name">
+                        <p>Nombre:</p>
+                        <input type="text" name="name" required>
+                    </div>
+                    <div class="row cel">
+                        <p>Celular:</p>
+                        <input type="tel" name="phone">
+                    </div>
+                    <div class="row email">
+                        <p>Correo:</p>
+                        <input type="email" name="email" required>
+                    </div>
+                    <div class="row text">
+                        <p>Mensaje:</p>
+                        <textarea name="message" required></textarea>
+                    </div>
+                </div>
+        
+                <!-- Honeypot Spam Protection -->
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+        
+                <!-- Custom Confirmation / Success Page -->
+                <!-- <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html"> -->
+                <div class="h-captcha" data-captcha="true"></div>
+                <button type="submit" class="send">Enviar</button>
+        
+            </form>
         </div>
-
-        <!-- Honeypot Spam Protection -->
-        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-
-        <!-- Custom Confirmation / Success Page -->
-        <!-- <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html"> -->
-        <div class="h-captcha" data-captcha="true"></div>
-        <button type="submit" class="send">Enviar</button>
-
-    </form>
-
-    <div class="wats">
-        <span>O contactanos por</span> <br/><a href="#" href="wa.link/76xr1p"><Image src={Whats} class="whats" alt="Paper image" />whatsapp</a>
+    
+        <div class="wats">
+            <p class="wats-txt">también por</p>
+            <a href="#" href="wa.link/76xr1p"><Image src={Whats} class="whats" alt="Paper image" />whatsapp</a>
+        </div>
     </div>
 </div>
 
@@ -64,10 +71,32 @@ import Wave from '../../assets/images/contact/wave.png';
 </script>
 
 <style>
+    #contactContainer{
+        position: relative;
+    }
+
     #contact {
         position: relative;
-        padding-top: 100px;
+        padding-top: 150px;
         overflow: hidden;
+    }
+
+    .paper{
+        width: 100%;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        object-fit: cover;
+        filter: drop-shadow(0px 14px 8px rgba(0,0,0,.1));
+    }
+
+    .form{
+        position: relative;
+        border-bottom: 1px dashed black;
+        padding-bottom: 100px;
+        padding: 0 30px;
+        padding-bottom: 100px;
     }
 
     #contactForm{
@@ -126,7 +155,7 @@ import Wave from '../../assets/images/contact/wave.png';
 
     input, textarea{
         width: 100%;
-        padding: 20px;
+        padding: 20px 0px;
         border: 1px solid black;
     }
 
@@ -158,13 +187,14 @@ import Wave from '../../assets/images/contact/wave.png';
     }
 
     .wats{
-        font-family: "thunder";
         text-align: center;
         margin-top: 50px;
+        position: relative;
+        padding: 100px 30px;
     }
 
     .wats a{
-        background-color: #075E54;
+        background-color: rgba(37, 211, 102, .9);
         display: flex;
         padding: 10px 30px;
         text-align: center;
@@ -177,7 +207,10 @@ import Wave from '../../assets/images/contact/wave.png';
         font-size: 40px;
         width: 300px;
         font-family: "satoshi";
-        margin: 0 auto;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
     }
 
     .wats a:visited{
@@ -189,10 +222,56 @@ import Wave from '../../assets/images/contact/wave.png';
         height: auto;
     }
 
-    .wats span{
-        font-size: 40px;
+    .wats .wats-txt{
+        font-size: 14svw;
         text-transform: uppercase;
         text-align: center;
         font-family: "satoshi";
+        margin: 0;
+        line-height: 1;
+    }
+
+    @media only screen and (max-width: 780px) {
+        .grid{
+            column-gap: 30px;
+            grid-template-rows: auto;
+        }
+
+        .title{
+            font-size: 50px;
+        }
+
+        input{
+            padding: 15px 0;
+        }
+
+        .send{
+            font-size: 30px;
+        }
+
+        .form{
+            padding-bottom: 310px;
+        }
+
+        .wave{
+            width: 150px;
+        }
+
+        .wats-txt{
+            font-size: 20svw !important;
+        }
+    }
+
+    @media only screen and (max-width: 400px) {
+        .wats a{
+            display: flex;
+            flex-direction: column;
+            font-size: 20px;
+            width: 170px;
+        }
+
+        .wats img{
+            width: 30px;
+        }
     }
 </style>
